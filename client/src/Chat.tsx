@@ -1,6 +1,5 @@
 // import ScrollToBottom from "react-scroll-to-bottom";
-import { useState,useEffect } from "react";
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 interface ChatProps {
   socket : any,
@@ -8,32 +7,32 @@ interface ChatProps {
   id:number
 }
 
-export const Chat: React.FC<ChatProps> = ({ socket, reveier,id }) => {
-  const [currentMessage, setCurrentMessage] = useState("");
+export const Chat: React.FC<ChatProps> = function ({ socket, reveier, id }) {
+  const [currentMessage, setCurrentMessage] = useState('');
   const [messageList, setMessageList] = useState<any[]>([]);
 
   const sendMessage = async () => {
-    if (currentMessage.trim() !== "") {
+    if (currentMessage.trim() !== '') {
       const messageData = {
         senderId: id,
-        receiverPhone:reveier,
+        receiverPhone: reveier,
         message: currentMessage,
         time:
-          new Date(Date.now()).getHours() +
-          ":" +
-          new Date(Date.now()).getMinutes(),
+          `${new Date(Date.now()).getHours()
+          }:${
+            new Date(Date.now()).getMinutes()}`,
       };
 
-      await socket.emit("send_message", messageData);
+      await socket.emit('send_message', messageData);
       setMessageList((list) => [...list, messageData]);
-      console.log('messageData',messageData);
-      setCurrentMessage("");
+      console.log('messageData', messageData);
+      setCurrentMessage('');
     }
   };
 
   useEffect(() => {
-    socket.on("receive_message", (data: any) => {
-      console.log('data',data);
+    socket.on('receive_message', (data: any) => {
+      console.log('data', data);
       setMessageList((list) => [...list, data]);
     });
   }, [socket]);
@@ -45,23 +44,21 @@ export const Chat: React.FC<ChatProps> = ({ socket, reveier,id }) => {
       </div>
       <div className="chat-body">
         {/* <ScrollToBottom className="message-container"> */}
-          {messageList.map((messageContent) => {
-            return (
-              <div
-                className="message"
-              >
-                <div>
-                  <div className="message-content">
-                    <p>{messageContent.message}</p>
-                  </div>
-                  <div className="message-meta">
-                    <p id="time">{messageContent.time}</p>
-                    <p id="author">{messageContent.author}</p>
-                  </div>
-                </div>
+        {messageList.map((messageContent) => (
+          <div
+            className="message"
+          >
+            <div>
+              <div className="message-content">
+                <p>{messageContent.message}</p>
               </div>
-            );
-          })}
+              <div className="message-meta">
+                <p id="time">{messageContent.time}</p>
+                <p id="author">{messageContent.author}</p>
+              </div>
+            </div>
+          </div>
+        ))}
         {/* </ScrollToBottom> */}
       </div>
       <div className="chat-footer">
@@ -73,7 +70,7 @@ export const Chat: React.FC<ChatProps> = ({ socket, reveier,id }) => {
             setCurrentMessage(event.target.value);
           }}
           onKeyPress={(event) => {
-            event.key === "Enter" && sendMessage();
+            event.key === 'Enter' && sendMessage();
           }}
         />
         <button onClick={sendMessage}>&#9658;</button>

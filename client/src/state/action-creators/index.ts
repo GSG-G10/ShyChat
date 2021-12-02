@@ -1,5 +1,5 @@
 import { Action } from "./../actions/index";
-import { actionTypes, User } from "./../action-types/index";
+import { actionTypes, User, Errors } from "./../action-types/index";
 import { Dispatch } from "redux";
 
 export const logIn = (): Function => {
@@ -29,6 +29,9 @@ export const getUserData = (user: User): Function => {
     dispatch(setUserData({
       id: user.id,
       phoneNumber: user.phoneNumber,
+      name:user.name,
+      photo:user.photo,
+      bio:user.bio
     }));
   };
 };
@@ -39,10 +42,11 @@ const setErrorState = (payload:any) => {
     payload,
   }
 }
-export const handleErrorMessage = (errorState:boolean): Function => {
+export const handleErrorMessage = (errors:Errors): Function => {
   return (dispatch: Dispatch) => {
     dispatch(setErrorState({
-      errState: errorState,
+      errState :errors.errState,
+      errMessage: errors.errMessage,
     }));
   };
 };

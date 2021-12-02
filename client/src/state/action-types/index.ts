@@ -9,4 +9,12 @@ export interface User {
     id: number;
     phoneNumber: string;
     iat: number,
+    name:string,
+    photo:string,
+    bio:string,
   }
+
+export interface Errors {
+    errState: boolean;
+    errMessage: string;
+} 
