@@ -39,7 +39,7 @@ export const EditProfileSection: React.FC<EditProfileSectionProps> = ({
         <div className='userInformation'>
           <Input name={name} value={name} type='text' label='Name' disabled={true} styleName='divStyle' labelStyle='labelStyle' inputStyle='inputStyle' />
           <Input name={phoneNumber} value={phoneNumber} type='text' label='Phone Number' disabled={true} styleName='divStyle' labelStyle='labelStyle' inputStyle='inputStyle' />
-          <Input onChange={handleBioChang} name={bio} value={bio} type='text' label='Bio' styleName='divStyle' labelStyle='labelStyle' inputStyle='inputStyle' />
+          <Input onChange={handleBioChang} name={bio}  type='text' label='Bio' styleName='divStyle' labelStyle='labelStyle' inputStyle='inputStyle' />
         </div>
         <div className='divStyle'>
           <input
