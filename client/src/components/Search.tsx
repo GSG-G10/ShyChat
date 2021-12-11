@@ -80,37 +80,28 @@ const SearchAppBar: React.FC<SearchProps> = ({ }) => {
 
   return (
     <>
-      <Box sx={{ height: '10vh', width: '100%',backgroundColor:'#fff', }}>
-        {/* <AppBar position="static"> */}
-          <Toolbar>
-            {/* <Typography
-              variant="h2"
-              noWrap
-              component="div"
-              sx={{ display: { xs: 'none', sm: 'block' } }}
-            >
-              Shy Chat
-            </Typography> */}
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ 'aria-label': 'search' }}
-                onChange={(e) => {
-                  setSearchInput(e.target.value)
-                  searchRequest()
-                }}
-                value={searchInput}
-              />
-            </Search>
-          </Toolbar>
+      <Box sx={{ height: '9vh', width: '100%', backgroundColor: '#fff', }}>
+        <Toolbar>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+              onChange={(e) => {
+                setSearchInput(e.target.value)
+                searchRequest()
+              }}
+              value={searchInput}
+            />
+          </Search>
+        </Toolbar>
         {/* </AppBar> */}
       </Box>
       {searchResults.map((user) => (
         id !== user['id'] &&
-        <Cantact key={user['phone']} name={user['name']} imageLink={user['photo']} phoneNumber={user['phone']} userId={user['id']} setId={() => {handleCurrentChat(user['id']);setSearchResults([]);setSearchInput('');}} />))}
+        <Cantact key={user['phone']} name={user['name']} imageLink={user['photo']} phoneNumber={user['phone']} userId={user['id']} setId={() => { handleCurrentChat(user['id']); setSearchResults([]); setSearchInput(''); }} />))}
     </>
   );
 }
