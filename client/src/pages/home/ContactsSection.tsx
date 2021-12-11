@@ -20,15 +20,8 @@ const ContactsSection: React.FC<ContactsSection> = ({ contacts, currentChatId })
     <div className='contactsSection'>
       <SearchAppBar />
       <ScrollableFeed className='scrollBar'>
-      <Cantact
-            setId={() => handleCurrentChat(1)}
-            key={1}
-            name='reem'
-            imageLink='photo'
-            phoneNumber='102154548'
-            current={true}
-          />
-        {/* {contacts.length ? (
+
+        {contacts.length ? (
           contacts.map((item: any) => <Cantact
             setId={() => handleCurrentChat(item.id)}
             key={item.id}
@@ -40,7 +33,7 @@ const ContactsSection: React.FC<ContactsSection> = ({ contacts, currentChatId })
           )
         ) : (
           <p> there is no contacts </p>
-        )} */}
+        )}
       </ScrollableFeed>
     </div>
   );
