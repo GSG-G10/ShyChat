@@ -134,8 +134,8 @@ export const SignUpForm: React.FC = () => {
         errorStyle='errorMessage'
       />
       <input value="Sign up" type="submit" className='submit' />
-      <p>
-        <Link to="/">go to LOGIN</Link>
+      <p className='loginLink'>
+        <Link to="/">Go to LOGIN</Link>
       </p>
     </form>
   );

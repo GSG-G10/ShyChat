@@ -1,6 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import http from '../service/httpService'
-
+import { Button } from 'react-bootstrap';
 const  Logout = () => {
     const history = useHistory();
     const handleLogout = async () => {
@@ -10,10 +10,7 @@ const  Logout = () => {
     }
 
     return (
-        <div>
-            <button onClick={handleLogout}>Logout</button>
-        </div>
-
+        <Button variant="danger"onClick={handleLogout}>Logout</Button> 
     )
 }
 

@@ -108,7 +108,7 @@ export const LoginForm: React.FC = () => {
       />
       <input value="Login" type="submit" className='submit' />
       <p> 
-      <Link to="/signup">Go To SIgn UP</Link>
+      <Link to="/signup">Go to Sign Up</Link>
       </p>
     </form>
   );

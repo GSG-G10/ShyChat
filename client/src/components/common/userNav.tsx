@@ -50,13 +50,14 @@ const UserNav: React.FC<UserNavProps> = ({
       <Box
         sx={{
           width: "100%",
-          height:'10vh',
+          height:'9vh',
           backgroundColor: "#fff",
           display: "flex",
           padding: "10px",
           alignItems: "center",
           border: "2px solid #f6f6f6",
           boxSizing: "border-box",
+          borderRadius:'2px'
         }}
       >
         <div className={classes.imageContainer}>

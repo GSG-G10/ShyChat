@@ -8,7 +8,7 @@ const Login: React.FC = () => {
     <div className='page'>
       <div className='signUpContainer'>
         <div className='imageContainer'>
-          <Img src={signup} alt="image-chat" styleName='image' />
+          <Img src='https://img.freepik.com/free-vector/boy-girl-as-couple-chat-each-other-with-bubble-words_10045-282.jpg?size=338&ext=jpg' alt="image-chat" styleName='image' />
         </div>
         <LoginForm />
       </div>

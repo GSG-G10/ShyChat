@@ -37,9 +37,9 @@ export const EditProfile: React.FC = () => {
         handleSubmit={handleSubmit}
         image={image}
       />
-      <div className='logoSection'>
-        <Img styleName='logoImage' alt="logo" src={logo} />
-      </div>
+      <div className='noChat'>
+          <Img src={logo} alt="logo-Shy-chat" styleName='logo' />
+        </div>
     </div>
   );
 };

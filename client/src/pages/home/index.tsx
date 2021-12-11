@@ -12,6 +12,7 @@ import SendIcon from "@mui/icons-material/Send";
 import ScrollableFeed from 'react-scrollable-feed'
 import "./style.css";
 import './messages.css';
+import { AppNav } from "../../components/appNav";
 
 const socket = io('https://shychatapp.herokuapp.com', {
   withCredentials: true,
@@ -94,6 +95,8 @@ const Home = () => {
   }, [currentChatId]);
 
   return (
+    <div className='MainPage'>
+    <AppNav/>
     <div className='homeContainer'>
       <ContactsSection contacts={userContacts} currentChatId={currentChatId} />
       {currentChatId ? (
@@ -139,6 +142,7 @@ const Home = () => {
           <Img src={logo} alt="logo-Shy-chat" styleName='logo' />
         </div>
       )}
+    </div>
     </div>
   );
 };

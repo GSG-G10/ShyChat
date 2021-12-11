@@ -26,7 +26,9 @@ export const EditProfileSection: React.FC<EditProfileSectionProps> = ({
   return (
     <div className='editProfileSection'>
       <nav className='profileNav'>
+        <Link to='/'>
         <ArrowBackIcon />
+        </Link>
         <h3 className='profileTitle'>Profile</h3>
       </nav>
       <div className='userInfoSection'>
@@ -48,7 +50,7 @@ export const EditProfileSection: React.FC<EditProfileSectionProps> = ({
             className='imageInput'
           />
         </div>
-        <button className='updateButton' onSubmit={handleSubmit}>Update Profile</button>
+        <button className='updateButton' onClick={handleSubmit}>Update Profile</button>
       </div>
     </div>
   );

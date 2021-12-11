@@ -46,7 +46,7 @@ const Cantact: React.FC<Props> = ({ name, imageLink, phoneNumber, setId, current
 useEffect(
   () => {
     if (current) {
-      setColor("#3E9D8A")
+      setColor("#6BC9BB")
     }else{
       setColor("#fff")
     }
@@ -60,7 +60,7 @@ useEffect(
           paddingLeft: '1rem',
           backgroundColor: color,
           "&:hover": {
-            backgroundColor: "#3E9D8A",
+            backgroundColor: "#6BC9BB",
             opacity: "0.9",
           },
           display: "flex",

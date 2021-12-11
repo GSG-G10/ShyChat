@@ -16,7 +16,7 @@
 }
 
 .sentMessages {
-  background: #44AB95;
+  background: #6BC9BB;
   border-radius: 15px;
   padding: 0.4rem 2rem;
   color: #fff;
@@ -27,7 +27,7 @@
   content: "";
   position: absolute;
   border: 17px solid transparent;
-  border-top: 11px solid #44AB95;
+  border-top: 11px solid #6BC9BB;
   border-right: none;
   bottom: -22px;
   right: 3px;

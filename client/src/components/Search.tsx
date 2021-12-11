@@ -80,25 +80,17 @@ const SearchAppBar: React.FC<SearchProps> = ({ }) => {
 
   return (
     <>
-      <Box sx={{ height: '10vh', width: '100%', }}>
-        <AppBar position="static">
+      <Box sx={{ height: '10vh', width: '100%',backgroundColor:'#fff', }}>
+        {/* <AppBar position="static"> */}
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{ mr: 2 }}
-            >
-            </IconButton>
-            <Typography
+            {/* <Typography
               variant="h2"
               noWrap
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
             >
               Shy Chat
-            </Typography>
+            </Typography> */}
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -114,7 +106,7 @@ const SearchAppBar: React.FC<SearchProps> = ({ }) => {
               />
             </Search>
           </Toolbar>
-        </AppBar>
+        {/* </AppBar> */}
       </Box>
       {searchResults.map((user) => (
         id !== user['id'] &&

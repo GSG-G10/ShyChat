@@ -1,3 +1,8 @@
+  .MainPage{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  }
   .homeContainer {
     display: flex;
     justify-content: flex-start;
@@ -6,8 +11,8 @@
 
   .contactsSection {
     background-color: #F8F9FA;
-    width: 30%;
-    height: 100vh;
+    width: 35%;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -17,7 +22,7 @@
   .chat {
     background-color: rgb(243, 243, 243);
     width: 70%;
-    height: 100vh;
+    height: 80vh;
 
   }
 
@@ -34,7 +39,7 @@
   }
 
   .messages {
-    height: 80vh;
+    height: 69vh;
     width: 100%;
     background: #F8F9FA;
     display: flex;
@@ -67,6 +72,7 @@
 
   .footer {
     display: flex;
+    background-color: #f7f7f7;
   }
 
   .sendBtn {
@@ -108,7 +114,6 @@
 
   .scrollBar {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
